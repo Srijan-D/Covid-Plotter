@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #map {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+    <title>Covid case plotter</title>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken =
+      "pk.eyJ1Ijoic3JpamQiLCJhIjoiY2wwOWxibzNhMGFkbzNjcDVpYm95a2hvbCJ9.7SO6AdtpH2xJU6p1mVjqsA";
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/dark-v10",
+      center: [-74.5, 40],
+      zoom: 1,
+      center: [0, 10],
+    });
+  </script>
+  <script src="/index.js"></script>
+</html>
